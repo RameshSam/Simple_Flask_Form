@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample Works</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1
+        {
+            text-transform: uppercase;
+            font-size: 2em;
+            margin: 10px;
+            color: transparent;
+            background: linear-gradient(-55deg,#f06,#06f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        form
+        {
+            background: transparent;
+            width: 450px;
+            height: 450px;
+            border: 2px solid #06f;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .inp
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .inp input
+        {
+            background: transparent;
+            color: #06f;
+            border: none;
+            text-align: end;
+            border-bottom: 2px solid #06f;
+            outline: none;
+            /* border-radius: 10px; */
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px 30px;
+        }
+        button
+        {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            color: white;
+            background: #06f;
+            margin: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('getdata')}}" method="POST">
+        <h1>hello World</h1>
+        <div class="inp">
+            <input type="text" name="Reg" placeholder="reg">
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="email" placeholder="email">
+            <input type="password" name="pass" placeholder="pass">
+        </div>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
